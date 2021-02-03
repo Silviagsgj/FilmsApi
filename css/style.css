@@ -1,0 +1,120 @@
+@font-face{
+    font-family: vw;
+    src: url("../font/VWText-Regular.otf");
+}
+
+body{
+    background-color: #fff;
+    font-family: vw;
+}
+
+.header {
+    grid-area: header;
+}
+
+.buscador {
+    grid-area: buscador;
+}
+
+.container {    
+    min-width: 380px; /*Desde donde se hace responsive */
+    max-width: 1920px; /*Hasta donde se hace responsive */
+    width: 100%;
+    grid-gap: 0.5em;
+    display: grid;   
+    grid-template-columns: 1fr;   
+    grid-template-rows: 200px 1fr; 
+    grid-template-areas: "header header header header" 
+                         "buscador buscador buscador buscador";
+                        
+}
+
+.header{ 
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 200px;
+    height: 300px;
+    border: 1px solid orange;
+    margin: 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria{
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid olive;
+}
+
+.ajustar{
+    width: 100%;
+    height: 85%;
+}
+
+.buscador__input{
+    padding: 0.5em 1em;
+    border-radius:  5px;
+    border: 1px solid #333;
+}
+
+.buscador__button{
+    background-color: #fff;
+    border: 2px solid blue;
+    padding: 0.5em 1em;
+    border-radius:  5px;
+}
+/* 
+.container{
+    background-color: rgba(155, 155, 155, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+
+
+
+
+
+
+.galeria{
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    
+    margin: 0.3em;
+}
+
+.ajustar{
+    width: 100%;
+    height: 100%;
+}*/
+
