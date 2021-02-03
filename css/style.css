@@ -3,8 +3,14 @@
     src: url("../font/VWText-Regular.otf");
 }
 
+/* #93A4AE fondo neutro */
+/* 032541  fondos oscuros*/
+/* #09B5E1 letra base */
+/* 69C6B3  letras sombra*/
+/* #34495E botones */
+
 body{
-    background-color: #fff;
+    background-color: #93A4AE;
     font-family: vw;
 }
 
@@ -30,39 +36,66 @@ body{
 }
 
 .header{ 
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #032541;
+    /* color: #93A4AE;
+    color: #69C6B3; */
+    color: #09B5E1;
+    border-radius: 0.2em;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.header__title{
+    border-bottom: 1px solid #09B5E1;
+}
+
+.header__subtitle{
+    font-size: 20px;
 }
 
 .buscador{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+  
     align-items: center;
+    /* padding: 1.5em; */
 }
 
 .box{
     width: 200px;
     height: 300px;
-    border: 1px solid orange;
-    margin: 0.3em;
+    /* border: 1px solid orange; */
+    margin: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color:#34495E;
+    color: #09B5E1;
+    color: #93A4AE
 }
 
 .galeria{
-    padding: 1em;
+    padding: 1.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid olive;
+    /* border: 1px solid olive; */
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    background-color:rgba(52,73,94, 0.1);
+    border-radius: 0.3em;
+    display: none;
 }
 
 .ajustar{
@@ -73,12 +106,30 @@ body{
 .buscador__input{
     padding: 0.5em 1em;
     border-radius:  5px;
-    border: 1px solid #333;
+    border: 1px solid #032541;
+   
+    color: #032541;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-family: vw;
+}
+
+.buscador__input:focus{
+    background-color: #34495E ;
+    color: #09B5E1;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-family: vw;
 }
 
 .buscador__button{
-    background-color: #fff;
-    border: 2px solid blue;
+    background-color: #34495E ;
+    color: #09B5E1;
+    color: #93A4AE;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-family: vw;
+    border: 2px solid  #032541;
     padding: 0.5em 1em;
     border-radius:  5px;
 }

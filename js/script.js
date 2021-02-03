@@ -42,7 +42,7 @@ const mostrar = () => {
       }
 
       galeria.appendChild(fragment);
-
+      galeria.style.display="flex";
     
 })
 }
