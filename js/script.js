@@ -63,17 +63,23 @@ const clickimg = (event) => {
     let identificador = elemento.nextSibling.textContent
     console.log(identificador);
  
+      //me voy al otro html llevandome el identificador
+    location.href="contenido.html?data="+identificador;
+   
+   //let id = getParameterByName('data');;
+  //console.log(id);
 
   //ruta de cada id
   //https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY;
-  fetch("https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY)  
-  .then(datos => datos.json())   
-   .then(datos_json => {
-     console.log(datos_json); 
+  //fetch("https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY)  
+  //.then(datos => datos.json())   
+   //.then(datos_json => {
+   
+   //  console.log(datos_json); 
 
 
          
-})//fin fetch
+//})//fin fetch
 
    }//if
 }
