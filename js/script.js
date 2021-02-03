@@ -30,15 +30,19 @@ const mostrar = () => {
                let ima = datos_json.results[i].poster_path;
                imagen.src=IMAGE+ima;  
                imagen.classList.add("ajustar");
-               articulo.appendChild(imagen);  
+               articulo.appendChild(imagen);
+                let sp= document.createElement("P");
+              sp.textContent = datos_json.results[i].id;
+              sp.style.display = "none";
+              articulo.appendChild(sp);
+               
                //let titulo = document.createElement("P");
                //titulo.textContent = `Titulo: ${datos_json.results[i].title}`;
                //articulo.appendChild(titulo);
                let popularidad = document.createElement("P");
                popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
                articulo.appendChild(popularidad);
-       
-               fragment.appendChild(articulo);
+             fragment.appendChild(articulo);  
       }
 
       galeria.appendChild(fragment);
@@ -49,3 +53,29 @@ const mostrar = () => {
 
 
 buscar.addEventListener("click", mostrar);
+
+const clickimg = (event) => {   
+  //si es una imagen
+  let elemento = event.target;
+
+  if(elemento.nodeName=="IMG"){
+    //console.log(elemento.nextSibling.textContent);
+    let identificador = elemento.nextSibling.textContent
+    console.log(identificador);
+ 
+
+  //ruta de cada id
+  //https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY;
+  fetch("https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY)  
+  .then(datos => datos.json())   
+   .then(datos_json => {
+     console.log(datos_json); 
+
+
+         
+})//fin fetch
+
+   }//if
+}
+
+galeria.addEventListener("click", clickimg);
