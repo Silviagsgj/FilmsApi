@@ -92,40 +92,66 @@ const datosunapelicula = () => {
 document.addEventListener("DOMContentLoaded", datosunapelicula);
 
 
-
-const opiniones = () => {   
+//  let opinionn = document.getElementById("opinionn");
+// const opiniones = () => {   
     // fetch("https://api.themoviedb.org/3/review/22?api_key="+KEY+"&language=es")  
    
-    // fetch("https://api.themoviedb.org/3/movie/"+id+"/reviews?api_key="+KEY)
-    // .then(datos => datos.json())   
-    //  .then(datos_json => {
+    fetch("https://api.themoviedb.org/3/movie/"+id+"/reviews?api_key="+KEY)
+    .then(datos => datos.json())   
+     .then(datos_json => {
 
-    //     // let opinion = document.getElementById("opi");
-    //     // opinion.textContent="fdsdf";
-    //     console.log(datos_json.results[0].content);
-    //     console.log(datos_json);
+        // let opinion = document.getElementById("opi");
+        // opinion.textContent="fdsdf";
+        // console.log(datos_json.results[0].author);
+        console.log(datos_json);
 
-    //     let cajaarticulos = document.getElementById("cajaarticulos");
-    //     const fragment = document.createDocumentFragment();
-    //     for (let i = 0; i < datos_json.results.length; i++) {
-            
-    //         let articulo = document.createElement("ARTICLE");   
-    //         articulo.classList.add("articlecontainer")   
-            
-    //         let opinion = document.createElement("P");
-    //         opinion.textContent = datos_json.results[i].content;
-    //         articulo.appendChild(opinion);
+        // let nom1 = document.getElementById("nom1");
+        // nom1.textContent=datos_json.results[0].author
 
-    //         // datos_json.results[i].author;
-    //         // datos_json.results[i].author;
-    //         // opinion.textContent=datos_json.results[i].content;
-            
-    //         fragment.appendChild(articulo);  
-    //     }
-    //     cajaarticulos.appendChild(fragment);
+        // let opi1 = document.getElementById("opi1");
+        
+        // opi1.textContent=datos_json.results[0].content.substring(0,350);
+      
+        // let opi2 = document.getElementById("opi2");
+        // opi2.textContent=datos_json.results[1].content.substring(0,350);
 
-    // })//fin fetch
-}
+        // let opi3 = document.getElementById("opi3");
+        // opi3.textContent=datos_json.results[2].content.substring(0,350);
+
+        // let opi4 = document.getElementById("opi4");
+        // opi4.textContent=datos_json.results[3].content.substring(0,350);
+        let arti = document.getElementById("arti");
+
+        
+        const fragment = document.createDocumentFragment();
+        for(let i=0; i<datos_json.results.length; i++){
+
+            let articulo = document.createElement("ARTICLE");
+            articulo.classList.add("articlecontainer");
+
+            let cabeceraarti = document.createElement("HEADER");
+            cabeceraarti.classList.add("articlecontainer__header");
+            cabeceraarti.textContent = datos_json.results[i].author;
+
+            // let avatar = document.createElement("IMG");
+            // let ima =  datos_json.results[i].author_details.avatar_path; 
+            // avatar.src=IMAGE+ima;  
+           
+            // cabeceraarti.appendChild(avatar);
+
+            articulo.appendChild(cabeceraarti);
+
+            let parrafo = document.createElement("P");
+            parrafo.classList.add("articlecontainer__text");
+            parrafo.textContent = datos_json.results[i].content.substring(0,350);
+
+            articulo.appendChild(parrafo)
+            fragment.appendChild(articulo);
+        }
+        arti.appendChild(fragment);
+
+    })//fin fetch
+// }
 
 //document.addEventListener("DOMContentLoaded", opiniones); 
 
@@ -153,8 +179,8 @@ fetch("https://api.simkl.com/tv/genres/"+genero+"?client_id="+CLIENTID)
     console.log(datos_json);
     let arrayrutas = [];
     //me saco 6
-    for(let i=0; i<6; i++){
-        //guardo las 6 rutas en un array
+    for(let i=0; i<8; i++){
+        //guardo las 8 rutas en un array
 
         //console.log(POSTER+datos_json[i].poster+POSTER2);
         arrayrutas[i] = POSTER+datos_json[i].poster+POSTER2;
@@ -180,6 +206,8 @@ let im3 =document.getElementById("im3");
 let im4 =document.getElementById("im4");
 let im5 =document.getElementById("im5");
 let im6 =document.getElementById("im6");
+let im7 =document.getElementById("im7");
+let im8 =document.getElementById("im8");
 
 
 im1.src=arrayrutas[0];
@@ -188,7 +216,8 @@ im3.src=arrayrutas[2];
 im4.src=arrayrutas[3];
 im5.src=arrayrutas[4];
 im6.src=arrayrutas[5];
-
+im7.src=arrayrutas[6];
+im8.src=arrayrutas[7];
 
 })//fin segundo fetch
 
