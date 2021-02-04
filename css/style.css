@@ -3,6 +3,10 @@
     src: url("../font/VWText-Regular.otf");
 }
 
+*{
+    margin: 0;
+}
+
 /* #93A4AE fondo neutro */
 /* 032541  fondos oscuros*/
 /* #09B5E1 letra base */
@@ -49,6 +53,12 @@ body{
     font-variant: small-caps;
     letter-spacing: 2px;
     word-spacing: 5px;
+    /* background-image: url("../image/bb.jpg"); */
+    /* background-repeat: repeat; */
+    /* background-size: cover;
+    background-position: center; */
+    
+   
 }
 
 .header__title{
@@ -165,10 +175,10 @@ body{
     min-width: 380px; /*Desde donde se hace responsive */
     max-width: 1920px; /*Hasta donde se hace responsive */
     width: 100%;
-    grid-gap: 0.5em;
+    /* grid-gap: 0.5em; */
     display: grid;   
     grid-template-columns: 1fr;   
-    grid-template-rows: 200px 75px 2fr 1fr 2fr 100px; 
+    grid-template-rows: 150px 75px 1fr 2fr 1fr 100px; 
     grid-template-areas: "header header header header" 
                          "nav nav nav nav"
                          "info info info info"
@@ -178,13 +188,142 @@ body{
                         
 }
 
+
+
+/* NAV */
 .nav{
-    border: 1px solid orange;
+    background-color:#032541;
+   
 }
 
+.nav__list{
+    /* border: 1px solid red; */
+    margin: 0;  
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+}
+
+.nav__item{
+    list-style: none;
+    /* margin: 0.5rem; */
+}
+
+.nav__a{
+    text-decoration: none;
+    color: #93A4AE;
+  
+}
+
+ .text{
+    /* border: 1px solid red; */
+    /* text-align: left; */
+} 
+
+.text__title{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #032541;
+    /* background-color: #032541; */
+    padding: 0.3em;
+    /* color: #09B5E1; */
+    color: #032541;
+    fonnt-variant: small-caps;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+   
+}
+
+.text__subtitle{
+    /* margin-bottom: 1.5rem; */
+    text-indent: 2rem;
+    /* text-align: justify; */
+}
+
+
+
+/* INFO */
+
+ 
 .info {
     border: 1px solid teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem; 
+    /* flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-evenly;
+    background-color: #fff; */
+ 
+} 
+ /* .info{    
+     border: 1px solid rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     
+}  */
+
+
+.info__box{
+    /* border: 1px solid #032541; */
+    border-radius: 3px;
+   width:45%;
+   padding: 1em;
+   text-align: justify;
+      background-color:rgba(3,37,65, 0.4);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
 }
+
+.info__box--title{
+/* border: 1px solid red; */
+/* margin-bottom: 1em; */
+font-variant: small-caps;
+letter-spacing: 2px;
+word-spacing: 4px;
+
+font-size: 24px;
+text-shadow: 2px 3px 2px #032541;
+color: #93a4ae;
+
+
+
+}
+
+.info__box--text{
+    /* border: 1px solid red; */
+   /* margin-bottom: 1em; */
+    
+    }
+
+    .info__box--textge{
+/* border: 1px solid red; */
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+font-variant: small-caps;
+letter-spacing: 2px;
+text-shadow: 2px 2px 1px #032541;
+color: #93a4ae;
+    }
+
+.boxi{
+    display: flex;
+      flex-wrap: wrap; 
+    justify-content: space-around;
+   
+ 
+} 
+
+
+
+
+
+
 
 .review {
     border: 1px solid red;
@@ -194,6 +333,71 @@ body{
     border: 1px solid purple;
 }
 
-.footer {
-    border: 1px solid green;
+
+
+
+
+.ajustar2{
+    width: 100%;
+    height: 100%;
 }
+
+.articlecontainer{
+    width: 40%;
+    margin: 1em;
+    background-color: #EDE7F1;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    /* color: black; */
+    border: 1px solid red;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background-color: #032541;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 0.5rem;
+    color: #93A4AE;
+}
+
+.article{
+    width: 80%;
+}
+
+.article--lomas, .article--atencion{
+    display: none;
+}
+
+.article__header{
+    font-weight: bold;
+}
+
+.article__item{
+    border-bottom: 1px solid #fff;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.article__a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.redes{  
+    display: flex;   
+    justify-content: space-around;    
+    padding:1rem;   
+}
+
+/* #93A4AE fondo neutro */
+/* 032541  fondos oscuros*/
+/* #09B5E1 letra base */
+/* 69C6B3  letras sombra*/
+/* #34495E botones */
