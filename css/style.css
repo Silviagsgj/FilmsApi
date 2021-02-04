@@ -26,6 +26,8 @@ body{
     grid-area: buscador;
 }
 
+
+
 .container {    
     min-width: 380px; /*Desde donde se hace responsive */
     max-width: 1920px; /*Hasta donde se hace responsive */
@@ -36,6 +38,7 @@ body{
     grid-template-rows: 200px 1fr; 
     grid-template-areas: "header header header header" 
                          "buscador buscador buscador buscador";
+                        
                         
 }
 
@@ -87,10 +90,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color:#34495E;
-    color: #09B5E1;
-    color: #93A4AE
+    justify-content: space-evenly;
+    /* background-color:#34495E; */
+    
+    color: #93A4AE;
+    color: #032541;
 }
 
 .galeria{
@@ -216,10 +220,7 @@ body{
   
 }
 
- .text{
-    /* border: 1px solid red; */
-    /* text-align: left; */
-} 
+
 
 .text__title{
     margin-bottom: 1rem;
@@ -228,7 +229,7 @@ body{
     padding: 0.3em;
     /* color: #09B5E1; */
     color: #032541;
-    fonnt-variant: small-caps;
+    font-variant: small-caps;
     letter-spacing: 2px;
     word-spacing: 4px;
    
@@ -294,11 +295,7 @@ color: #93a4ae;
 
 }
 
-.info__box--text{
-    /* border: 1px solid red; */
-   /* margin-bottom: 1em; */
-    
-    }
+
 
     .info__box--textge{
 /* border: 1px solid red; */
@@ -329,9 +326,6 @@ color: #93a4ae;
     border: 1px solid red;
 }
 
-.gallery {
-    border: 1px solid purple;
-}
 
 
 
@@ -354,6 +348,38 @@ color: #93a4ae;
     /* color: black; */
     border: 1px solid red;
 }
+
+
+/* GALLERY */
+.gallery {
+    /* display: none; */
+    border: 1px solid purple;
+    /* padding: 2rem; */
+    
+}
+
+
+
+.images{   
+    /* margin: 0 auto; */
+    border: 1px solid green;
+    /* width: 50%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* 
+.images__container{
+    border: 1px solid red;
+    /* width: 25%; */
+    /* margin: 2em; */
+/*} */
+
+/* .images__img {
+    width: 100%;
+    height: 100%;
+} */
 
 
 /* FOOTER */
