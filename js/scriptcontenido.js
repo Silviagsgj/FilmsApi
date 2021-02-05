@@ -32,7 +32,7 @@ const datosunapelicula = () => {
    
     console.log(datos_json); 
     let caja = document.createElement("DIV");
-    caja.classList.add("info__box");
+    caja.classList.add("info__box2");
 
     //algunas pueden que no tengan!!
     let imagen = document.createElement("IMG");
@@ -44,27 +44,31 @@ const datosunapelicula = () => {
     
     let caja2 = document.createElement("DIV");
     caja2.classList.add("info__box");
+
+    let caja3 = document.createElement("DIV");
+    caja3.classList.add("caja3");
     
     let titulopelicula = document.createElement("H3");
     titulopelicula.textContent = datos_json.title;
     titulopelicula.classList.add("info__box--title");
-    caja2.appendChild(titulopelicula);
+    caja3.appendChild(titulopelicula);
 
     //si esta vacio no mostrar!!
     let descripcion = document.createElement("P");
     descripcion.textContent =  datos_json.overview;
-    // descripcion.classList.add("info__box--text");
-    caja2.appendChild(descripcion);
+    descripcion.classList.add("info__box--text");
+    caja3.appendChild(descripcion);
 
     let fecha = document.createElement("P");
     fecha.textContent = `Fecha de estreno: ${datos_json.release_date}`;
-    caja2.appendChild(fecha);
+    caja3.appendChild(fecha);
 
     let puntuacion = document.createElement("P");
     puntuacion.textContent = `Puntuación media: ${datos_json.vote_average}`;
     // puntuacion.classList.add("info__box--text");
-    caja2.appendChild(puntuacion);
+    caja3.appendChild(puntuacion);
 
+    caja2.appendChild(caja3);
 
     // let texto = document.createElement("SPAN");
     // texto.textContent = "Generos:";

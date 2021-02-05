@@ -1,0 +1,282 @@
+@media screen and (min-width:480px) {       
+
+/********************** NAV *****************/
+    .nav__list{
+        justify-content: space-around;
+    }
+  
+  
+
+/********************** SUBTITULOS *****************/
+
+    .text__subtitle{
+        display: block;
+    }
+
+/********************** SECTION INFO *****************/
+
+    .info__box--textge{
+        display:flex;
+    }
+
+    /* mostrar tb imagen avatar */
+}
+
+@media screen and (min-width:768px) { 
+
+/********************** GRID *************************/
+.gallery {
+    grid-area: gallery;
+}
+
+.container2{    
+    grid-template-rows: 80px 15% repeat(3, auto) 150px; 
+    grid-template-areas: "nav" 
+                         "header"
+                         "info"
+                         "review" 
+                         "gallery"                        
+                         "footer";                        
+}
+
+
+/********************* NAV ************************/
+.nav{
+    border-bottom: 1px solid transparent;
+}
+
+
+/********************* TEXTOS ************************/
+.text{
+    align-items: flex-start;
+}
+    
+/********************** SECTION INFO *****************/ 
+    
+
+    .info__box{
+        /* border: 1px solid red; */
+        flex-direction: row-reverse;        
+    }
+
+    .info__box--textge{
+        /* border: 1px solid red; */
+        width: 20%;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 2px solid transparent;
+    }
+
+    .caja3{
+        /* border: 1px solid teal; */
+        align-items: flex-start;
+        width: 60%;       
+    }
+
+/**************************** SECTION REVIEW *************************/
+
+    .cajaarticulos{
+        flex-direction: row;
+        justify-content: space-around;        
+        flex-wrap: wrap;        
+    }
+
+    .articlecontainer{
+        width: 45%;
+        background-color: #ffeaab60;        
+        border-bottom: 1px solid transparent;
+    
+    }
+
+    .articlecontainer__header{
+        /* border: 1px solid red; */
+        text-align: center;
+        background-color: #fecb30;  
+        color:  #ffffe3;    
+        border-radius: 3px;
+        letter-spacing: 0.2rem;
+    }
+
+/******************** GALLERY **********************/
+    .gallery{
+        display: flex;
+    }
+
+
+/********************** FOOTER *****************/
+
+.footer{
+    background-color: #7c2b40;   
+    align-items: center;
+}
+
+
+   
+.article--lomas{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    padding: 0.5em;   
+}
+
+
+
+}
+
+@media screen and (min-width:1024px) { 
+
+/********************** GRID *****************/
+
+    .container2{    
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 80px 15% repeat(3, auto) 150px; 
+        grid-template-areas: "nav header" 
+                             "nav header"
+                             "info info"
+                             "review review" 
+                             "gallery gallery"                        
+                             "footer footer";                        
+    }
+
+/********************** GRID *****************/
+    .nav{
+        background-color: #ffffe3;       
+    }
+   
+    .nav__list{
+        /* border: 1px solid red; */
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;       
+    }
+
+    .nav__a{
+         color: #7c2b40;
+    }
+    
+
+
+/********************** SECTION INFO *****************/
+
+.info__box{
+    /* border: 1px solid red; */
+    flex-direction: column-reverse;
+    width: 40%;      
+}
+
+.info__box--textge{
+    /* border: 1px solid red; */
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;     
+}
+
+.caja3{
+    /* border: 1px solid teal; */
+    align-items: center;
+    width: 100%;       
+}
+
+       .boxi{
+        /* border: 1px solid royalblue; */
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center; 
+        padding: 1rem;
+    }
+
+    .info__box2{
+        display: flex;
+    }    
+
+    .ajustar2{
+     width: 100%;
+    height: 50%; 
+    border-radius: 3px;
+    }
+ 
+    /**************************** SECTION REVIEW *************************/
+    
+    .articlecontainer{
+        /* border: 1px solid red; */
+        width: 22%;      
+    }
+
+    /********************** FOOTER *****************/
+
+.footer{  
+    flex-direction: row-reverse;
+}
+
+.article--atencion{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;  
+}
+   
+    
+}
+
+@media screen and (min-width:1200px) { 
+    
+    /********************** GRID *************************/
+
+    .container2{    
+        grid-template-columns: 200px 2fr 1fr;
+        grid-template-rows: 100px 20% repeat(2, auto) 180px; 
+        grid-template-areas: "nav header header" 
+                             "nav header header"
+                             "info info review" 
+                             "gallery gallery gallery"                        
+                             "footer footer footer";                        
+    }
+
+
+     /********************** INFO *************************/
+
+    
+    .info__box{
+        /* border: 1px solid green; */
+        width: 45%;
+    }   
+
+    .boxi{
+        /* border: 1px solid pink; */
+        flex-direction: row;     
+        justify-content: space-around;
+        background-color: #ffffe3;
+        border-radius: 3px;
+    }
+
+    .info__box2{
+        /* border: 1px solid red; */
+        width: 40%;
+    }
+
+    .ajustar2{
+        width: 100%;
+       height: 50%; 
+       border-radius: 3px;
+    }
+
+      /********************** REVIEWS *************************/
+
+      .text__subtitle{
+          display: none;
+      }
+        
+
+      .articlecontainer{
+          width: 100%;
+          background-color: #ffffe3;
+      }
+
+     
+}
