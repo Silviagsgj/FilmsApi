@@ -1,87 +1,152 @@
-
 const KEY = "945da0b433d1c512e2248fae93c2da9e";
 const IMAGE = "https://image.tmdb.org/t/p/w500";
 
-let galeria = document.getElementById("galeria");
 let busqueda = document.getElementById("busqueda");
 let buscar = document.getElementById("buscar");
+let galeria = document.getElementById("galeria");
+let error = document.getElementById("error");
 
-const mostrar = () => {    
-  // https://test-es.edamam.com
-  // 
-  https://www.etnassoft.com/api/v1/get/?id=589
-  // fetch("https://api.edamam.com/search?q="+busqueda.value+"&app_id="+APP_ID+"&app_key="+APP_KEY)
-   //fetch("https://api.spoonacular.com/recipes/complexSearch?query="+busqueda.value+"&apiKey=1b33379a372d43a0b29fca955c6146c6")
-   //fetch("https://foodapi.calorieking.com/v1/foods?query=burger&region=us&fields=$summary,mass&CS-8748")
-   fetch("https://api.themoviedb.org/3/search/movie?api_key="+KEY+"&language=es&query="+busqueda.value+"&page=1")
-  
-   .then(datos => datos.json())   
-    .then(datos_json => {
-      console.log(datos_json);    //hits
-      
-      console.log(datos_json.results);
-      
-      const fragment = document.createDocumentFragment();
+//Funcion que me muestra las peliculas mas vistas de la semana en la galeria por defecto
+const masvistas = () => {  
+  fetch("https://api.themoviedb.org/3/trending/movie/week?api_key="+KEY)
+  .then(datos => datos.json())   
+  .then(datos_json => {
+    console.log(datos_json);    
+    //console.log(datos_json.results);
+    const fragment = document.createDocumentFragment();
+      //Recorro el array que contiene los datos de las peliculas
       for(let i=0; i<datos_json.results.length; i++){
-               //console.log(datos_json.results[i].title);        
-               let articulo = document.createElement("ARTICLE");
-               articulo.classList.add("box");
-               let imagen = document.createElement("IMG");
-               let ima = datos_json.results[i].poster_path;
-               imagen.src=IMAGE+ima;  
-               imagen.classList.add("ajustar");
-               articulo.appendChild(imagen);
-                let sp= document.createElement("P");
-              sp.textContent = datos_json.results[i].id;
-              sp.style.display = "none";
-              articulo.appendChild(sp);
-               
-               //let titulo = document.createElement("P");
-               //titulo.textContent = `Titulo: ${datos_json.results[i].title}`;
-               //articulo.appendChild(titulo);
-               let popularidad = document.createElement("P");
-               popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
-               articulo.appendChild(popularidad);
-             fragment.appendChild(articulo);  
-      }
+        //console.log(datos_json.results[i].title);        
+        let articulo = document.createElement("ARTICLE");
+        articulo.classList.add("box");
 
-      galeria.appendChild(fragment);
-      galeria.style.display="flex";
+        let imagen = document.createElement("IMG");
+        //Caso de que la pelicula no tenga imagen, le pongo una por defecto y añado su titulo
+        if(datos_json.results[i].poster_path==null){
+          imagen.src = "image/b.jpg";        
+          // let titulo = document.createElement("P");
+          // titulo.textContent = datos_json.results[i].title;          
+          // articulo.appendChild(titulo);  
+        }else{
+          let ima = datos_json.results[i].poster_path;
+          imagen.src=IMAGE+ima; 
+        }         
+        imagen.classList.add("ajustar");
+        articulo.appendChild(imagen);
+        
+        //Obtengo el id para llevarlo a la otra pag
+        let sp= document.createElement("P");
+        sp.textContent = datos_json.results[i].id;
+        sp.style.display = "none";
+        articulo.appendChild(sp);              
+          
+        // let popularidad = document.createElement("P");
+        // popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
+        // articulo.appendChild(popularidad);
+        fragment.appendChild(articulo);  
+      }//for
+
+    galeria.appendChild(fragment);
+    galeria.style.display="flex";
+ 
+  })
+}//mostrar
+
+document.addEventListener("DOMContentLoaded", masvistas);
+
+
+//Funcion que borra el contenido de la galeria al realizar una nueva busqueda
+const borrar = () => {
+  //Si tengo algun mensaje de error lo pongo a vacio
+  error.textContent="";
+  // console.log(galeria.children.length);
+  while(galeria.children.length>0){
+    //recorro la galeria y borro su contenido
+    for(let i=0; i<galeria.children.length; i++){
+      galeria.children[i].remove();
+    }//for    
+  }//if
+}//borrar
+
+// let borrarb = document.getElementById("borrarb");
+// borrarb.addEventListener("click", borrar);
+
+
+//Funcion que me muestra una galeria de peliculas 
+const mostrar = () => {
+    if(busqueda.value==""){ 
+        // console.log("Debes introducir una busqueda");        
+        error.textContent = "Debes introducir una busqueda";
+    }else{ 
+
+  fetch("https://api.themoviedb.org/3/search/movie?api_key="+KEY+"&language=es&query="+busqueda.value+"&page=1")
+  .then(datos => datos.json())   
+  .then(datos_json => {
+    if(datos_json.results.length==0){
+      // console.log(busqueda.value);
+      error.textContent = "No se ha encontrado ninguna pelicula con este nombre: "+busqueda.value;
+    }else{
+
     
-})
-}
+    borrar();
+   
+   
 
+    
+    // console.log(datos_json);    
+    console.log(datos_json.results);
+    const fragment = document.createDocumentFragment();
+      //Recorro el array que contiene los datos de las peliculas
+      for(let i=0; i<datos_json.results.length; i++){
+        //console.log(datos_json.results[i].title);        
+        let articulo = document.createElement("ARTICLE");
+        articulo.classList.add("box");
+
+        let imagen = document.createElement("IMG");
+        //Caso de que la pelicula no tenga imagen, le pongo una por defecto y añado su titulo
+        if(datos_json.results[i].poster_path==null){
+          imagen.src = "image/b.jpg";        
+          // let titulo = document.createElement("P");
+          // titulo.textContent = datos_json.results[i].title;          
+          // articulo.appendChild(titulo);  
+        }else{
+          let ima = datos_json.results[i].poster_path;
+          imagen.src=IMAGE+ima; 
+        }         
+        imagen.classList.add("ajustar");
+        articulo.appendChild(imagen);
+        
+        //Obtengo el id para llevarlo a la otra pag
+        let sp= document.createElement("P");
+        sp.textContent = datos_json.results[i].id;
+        sp.style.display = "none";
+        articulo.appendChild(sp);              
+          
+        // let popularidad = document.createElement("P");
+        // popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
+        // articulo.appendChild(popularidad);
+        fragment.appendChild(articulo);  
+      }//for
+
+    galeria.appendChild(fragment);
+    galeria.style.display="flex";
+    }//fin else
+  }) }//fin de else
+}//mostrar
 
 buscar.addEventListener("click", mostrar);
 
-const clickimg = (event) => {   
-  //si es una imagen
-  let elemento = event.target;
 
+//Funcion que guarda el identificador de la imagen y redirecciona a otra pag
+const clickimg = (event) => {  
+  let elemento = event.target;
   if(elemento.nodeName=="IMG"){
     //console.log(elemento.nextSibling.textContent);
     let identificador = elemento.nextSibling.textContent
-    console.log(identificador);
- 
-      //me voy al otro html llevandome el identificador
+    //console.log(identificador); 
+    //Voy al otro html llevandome el identificador
     location.href="contenido.html?data="+identificador;
-   
-   //let id = getParameterByName('data');;
-  //console.log(id);
-
-  //ruta de cada id
-  //https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY;
-  //fetch("https://api.themoviedb.org/3/movie/"+identificador+"?api_key="+KEY)  
-  //.then(datos => datos.json())   
-   //.then(datos_json => {
-   
-   //  console.log(datos_json); 
-
-
-         
-//})//fin fetch
-
-   }//if
-}
+  }//if
+}//clickimg
 
 galeria.addEventListener("click", clickimg);
