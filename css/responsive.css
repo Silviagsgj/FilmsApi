@@ -4,11 +4,9 @@
     .nav__list{
         justify-content: space-around;
     }
-  
-  
+   
 
 /********************** SUBTITULOS *****************/
-
     .text__subtitle{
         display: block;
     }
@@ -18,8 +16,7 @@
     .info__box--textge{
         display:flex;
     }
-
-    /* mostrar tb imagen avatar */
+    
 }
 
 @media screen and (min-width:768px) { 
@@ -30,8 +27,8 @@
 }
 
 .container2{    
-    grid-template-rows: 80px 15% repeat(3, auto) 150px; 
-    grid-template-areas: "nav" 
+    grid-template-rows: 15% repeat(3, auto) 200px; 
+    grid-template-areas: 
                          "header"
                          "info"
                          "review" 
@@ -40,9 +37,8 @@
 }
 
 
-/********************* NAV ************************/
-.nav{
-    border-bottom: 1px solid transparent;
+.header{     
+    grid-template-rows: 1fr 75px;
 }
 
 
@@ -83,7 +79,7 @@
 
     .articlecontainer{
         width: 45%;
-        background-color: #ffeaab60;        
+        background-color: #ff1d591c;       
         border-bottom: 1px solid transparent;
     
     }
@@ -91,7 +87,7 @@
     .articlecontainer__header{
         /* border: 1px solid red; */
         text-align: center;
-        background-color: #fecb30;  
+        background-color: #FF1D58;
         color:  #ffffe3;    
         border-radius: 3px;
         letter-spacing: 0.2rem;
@@ -102,11 +98,12 @@
         display: flex;
     }
 
+    
 
 /********************** FOOTER *****************/
 
 .footer{
-    background-color: #7c2b40;   
+    /* background-color: #7c2b40;    */
     align-items: center;
 }
 
@@ -129,33 +126,32 @@
 
 /********************** GRID *****************/
 
-    .container2{    
-        grid-template-columns: 200px 1fr;
-        grid-template-rows: 80px 15% repeat(3, auto) 150px; 
-        grid-template-areas: "nav header" 
-                             "nav header"
-                             "info info"
-                             "review review" 
-                             "gallery gallery"                        
-                             "footer footer";                        
+  
+
+    .header{ 
+     
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows:repeat(2, 1fr);
+        grid-template-areas: "nav headertext"
+                             "nav headertext"; 
+                               
+
     }
+
 
 /********************** GRID *****************/
-    .nav{
-        background-color: #ffffe3;       
-    }
    
     .nav__list{
-        /* border: 1px solid red; */
-        flex-direction: column;
+        /* border: 1px solid red;  */
+         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;       
-    }
+    } 
 
     .nav__a{
-         color: #7c2b40;
-    }
-    
+         color: #FF1D58;
+    } 
+     
 
 
 /********************** SECTION INFO *****************/
@@ -229,15 +225,23 @@
     /********************** GRID *************************/
 
     .container2{    
-        grid-template-columns: 200px 2fr 1fr;
-        grid-template-rows: 100px 20% repeat(2, auto) 180px; 
-        grid-template-areas: "nav header header" 
-                             "nav header header"
-                             "info info review" 
-                             "gallery gallery gallery"                        
-                             "footer footer footer";                        
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows:  20% repeat(2, auto) 200px; 
+        grid-template-areas: 
+                             "header header"
+                             "info review" 
+                             "gallery gallery"                        
+                             "footer footer";                        
     }
 
+    .nav{
+        background-color: #FF1D58;
+
+    }
+
+    .nav__a{
+        color: #ffffe3;
+    }
 
      /********************** INFO *************************/
 

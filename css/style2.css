@@ -1,0 +1,259 @@
+@font-face{
+    font-family: vw1; 
+    src: url("../font/SF\ Movie\ Poster\ Bold.ttf");
+}
+
+*{
+    margin: 0;
+}
+
+
+body{  
+    font-family: vw1;    
+    color: #ffffe3;
+    background-color:#37465B;
+}
+
+/********************************* GRID AREAS *************************/
+
+.header {
+    grid-area: header;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+
+.headertext{
+    grid-area: headertext;   
+}
+
+.buscador {
+    grid-area: buscador;
+}
+
+.footer {
+    grid-area: footer;    
+}
+
+/*************************** Contenedor ******************************/
+
+.container {    
+    min-width: 380px; /*Desde donde se hace responsive */
+    max-width: 1920px; /*Hasta donde se hace responsive */
+    width: 100%;    
+    display: grid;   
+    grid-template-columns: 1fr;   
+    grid-template-rows: 200px 1fr 100px; 
+    grid-template-areas: "header"                         
+                         "buscador"
+                         "footer";                     
+}
+
+
+/**********************  HEADER  ******************************/
+
+.header{ 
+    /* border: 1px solid blue; */
+    background-color: #212B38;    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (2, 1fr);
+    grid-template-areas: "headertext" 
+                          "nav"; 
+    width: 100%;
+}
+
+.header__title{    
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
+    color: #ffffe3;
+    text-shadow: 3px 2px 2px #FF1D58;
+}
+
+.header__subtitle{
+    /* font-size: 20px; */
+    display: none;
+    color: #ffffe3;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
+}
+
+.headertext{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/********************************** NAV *************************************************/
+.nav{
+    /* border: 1px solid white; */
+   background-color: #212B38;   
+}
+
+.nav__list{
+    /* border: 1px solid red; */  
+    height: 100%;
+    display: flex;   
+    justify-content:space-evenly;      
+    align-items: center;
+    padding: 0;
+}
+
+.nav__item{
+    /* border: 1px solid orange; */
+    list-style: none; 
+}
+
+.nav__a{
+    text-decoration: none;
+    font-size: 0.8rem;    
+    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem;
+    color: #ffffe3;  
+}
+
+
+
+/*************   PARTE BUSCADOR    ***************************/
+
+.buscador{
+    /* border: 1px solid teal; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;   
+}
+
+.cajabusqueda{
+    /* border: 1px solid rosybrown; */
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;  
+}
+
+.buscador__input{  
+    width: 50%;  
+    border: 1px solid  #2d203a;
+    padding: 0.5em 1em;
+    border-radius:  5px;
+    color:  #2d203a;     
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+    font-family: vw;
+}
+
+.buscador__button{
+    background-color: #FF1D58 ;
+    border: 1px solid #FF1D58 ;
+    padding: 0.5em 1em;    
+    border-radius:  5px;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+    font-family: vw;
+    color: #ffffe3; 
+}
+
+.buscador__input:focus{
+    background-color: #37465B;
+    color: #ffffe3;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+    font-family: vw;    
+}
+
+
+/**********************************  GALERIA  *********************/
+
+
+.box{
+    /* border: 1px solid orange; */
+    width: 150px;
+    height: 250px;    
+    margin: 0.5rem;
+}
+
+
+
+.ajustar:hover{
+    border: 2px solid #ffffe3;
+    cursor: pointer;
+   filter: grayscale(0%);
+}
+
+.ajustar{
+    width: 100%;
+    height: 100%;    
+    filter: grayscale(30%);
+   
+}
+
+
+.galeria{
+    /* border: 1px solid olive; */
+    width: 80%;    
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+    display: none;
+}
+
+
+
+
+/***********************************    FOOTER ***********************************/
+
+.footer{   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 1rem;
+    color: #ffffe3;    
+    background-color:  #212B38;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.article{
+    width: 80%;
+    /* border: 1px solid teal; */
+}
+
+.article--lomas, .article--atencion{
+    display: none;
+}
+
+.article__header{
+    font-weight: bold;
+    /* border: 1px solid black; */
+}
+
+.article__item{
+    border-bottom: 1px solid #fff;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.article__a{
+    text-decoration: none;
+    color: #ffffe3;  
+}
+
+.redes{  
+    display: flex;   
+    justify-content: space-around;    
+    padding:1rem;   
+}
+
