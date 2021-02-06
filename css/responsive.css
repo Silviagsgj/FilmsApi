@@ -41,18 +41,46 @@
 
 
 .header{     
-    grid-template-rows: 1fr 75px;
+    grid-template-rows: 1fr 75px;   
 }
 
+.header__subtitle{
+    display: flex;
+    text-align: center;
+    /* border: 1px solid red;; */
+}
+
+.headertext{
+    /* border:1px solid red; */
+    flex-direction: column;
+
+}
 
 /********************* TEXTOS ************************/
 .text{
     align-items: flex-start;
 }
 
+.text__title{
+    font-size: 2rem;
+}
+
+.text__subtitle{
+    font-size: 1.8rem;
+}
+
 /******************** NAV ****************************/
+
+.nav{
+    background-color: #ff1d5993;
+}
+
 .nav__a{
     font-size: 1.5rem;
+}
+
+.nav__a:hover{
+    color: #212B38; 
 }
     
 /********************** SECTION INFO *****************/ 
@@ -97,7 +125,7 @@
     .articlecontainer__header{
         /* border: 1px solid red; */
         text-align: center;
-        background-color: #FF1D58;
+        background-color: #FF1D58;        
         color:  #ffffe3;    
         border-radius: 3px;
         letter-spacing: 0.2rem;
@@ -139,6 +167,16 @@
          font-size: 1.6rem;
     } 
      
+
+/*****************  Textos ************************/
+
+    .text__title{
+        font-size: 2.5rem;
+    }
+    
+    .text__subtitle{
+        font-size: 2rem;
+    }
 
 
 /********************** SECTION INFO *****************/
@@ -226,7 +264,7 @@
   .header{ 
      
         grid-template-columns: 1fr;
-        grid-template-rows:repeat(2, 1fr);
+        grid-template-rows:1fr 3fr;
         grid-template-areas: "nav"
                              "headertext"; 
                                

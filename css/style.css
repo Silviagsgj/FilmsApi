@@ -70,7 +70,7 @@ body{
 .header{ 
     /* border: 1px solid blue; */
     background-color: #212B38;    
-    display: grid;
+    display: grid;   
     grid-template-columns: 1fr;
     grid-template-rows:repeat(2, 1fr);
     grid-template-areas: "headertext"
@@ -79,7 +79,7 @@ body{
     width: 100%;
     font-family: vw1;
 }
-
+    
 .header__title{    
     font-size: 4rem;
     letter-spacing: 0.5rem;
@@ -111,8 +111,9 @@ body{
    background-color: #212B38;   
 }
 
+
 .nav__list{
-    /* border: 1px solid red; */  
+    /* border: 1px solid red;   */
     height: 100%;
     display: flex;   
     justify-content:space-evenly;      
@@ -244,7 +245,7 @@ text-shadow: 1px 2px 4px #37465B;
 
 .review {
     /* border: 1px solid red; */ 
-    background-color: #FF1D58;  
+    background-color: #FF1D58;      
     padding: 1rem;     
     display: flex;
     flex-direction: column;
