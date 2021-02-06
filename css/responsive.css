@@ -5,6 +5,9 @@
         justify-content: space-around;
     }
    
+    .nav__a{
+        font-size: 1.2rem;
+    }
 
 /********************** SUBTITULOS *****************/
     .text__subtitle{
@@ -46,6 +49,11 @@
 .text{
     align-items: flex-start;
 }
+
+/******************** NAV ****************************/
+.nav__a{
+    font-size: 1.5rem;
+}
     
 /********************** SECTION INFO *****************/ 
     
@@ -74,7 +82,9 @@
     .cajaarticulos{
         flex-direction: row;
         justify-content: space-around;        
-        flex-wrap: wrap;        
+        flex-wrap: wrap;     
+        font-size: 1.8rem;   
+
     }
 
     .articlecontainer{
@@ -102,9 +112,9 @@
 
 /********************** FOOTER *****************/
 
-.footer{
-    /* background-color: #7c2b40;    */
+.footer{    
     align-items: center;
+    font-size: 1.2rem;
 }
 
 
@@ -124,32 +134,9 @@
 
 @media screen and (min-width:1024px) { 
 
-/********************** GRID *****************/
 
-  
-
-    .header{ 
-     
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows:repeat(2, 1fr);
-        grid-template-areas: "nav headertext"
-                             "nav headertext"; 
-                               
-
-    }
-
-
-/********************** GRID *****************/
-   
-    .nav__list{
-        /* border: 1px solid red;  */
-         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;       
-    } 
-
-    .nav__a{
-         color: #FF1D58;
+    .nav__a{         
+         font-size: 1.6rem;
     } 
      
 
@@ -166,6 +153,7 @@
     /* border: 1px solid red; */
     width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1rem;     
 }
@@ -188,13 +176,18 @@
 
     .info__box2{
         display: flex;
+        /* border: 1px solid red; */
+        background-color: #ffffe3;
+            border-radius: 3px;
     }    
 
-    .ajustar2{
-     width: 100%;
-    height: 50%; 
-    border-radius: 3px;
-    }
+     .ajustar2{
+     width: 350px;
+    height: 250px; 
+
+    object-fit: contain;
+  
+    } 
  
     /**************************** SECTION REVIEW *************************/
     
@@ -203,10 +196,15 @@
         width: 22%;      
     }
 
+    .cajaarticulos{
+        font-size: 2rem;
+    }
+
     /********************** FOOTER *****************/
 
 .footer{  
     flex-direction: row-reverse;
+    font-size: 1.5rem;
 }
 
 .article--atencion{
@@ -217,6 +215,7 @@
     padding: 0.5em;  
 }
    
+
     
 }
 
@@ -224,13 +223,24 @@
     
     /********************** GRID *************************/
 
+  .header{ 
+     
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows:repeat(2, 1fr);
+        grid-template-areas: "nav headertext"
+                             "nav headertext"; 
+                               
+
+    } 
+
+
     .container2{    
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 4fr 2fr;
         grid-template-rows:  20% repeat(2, auto) 200px; 
         grid-template-areas: 
                              "header header"
-                             "info review" 
-                             "gallery gallery"                        
+                             "info review "                              
+                             "gallery review"                        
                              "footer footer";                        
     }
 
@@ -241,7 +251,16 @@
 
     .nav__a{
         color: #ffffe3;
+        font-size: 1.8rem;
     }
+
+    .nav__list{
+        /* border: 1px solid red;  */
+         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;       
+    } 
+
 
      /********************** INFO *************************/
 
@@ -264,11 +283,10 @@
         width: 40%;
     }
 
-    .ajustar2{
+     .ajustar2{
         width: 100%;
-       height: 50%; 
-       border-radius: 3px;
-    }
+       
+    } 
 
       /********************** REVIEWS *************************/
 
@@ -278,9 +296,13 @@
         
 
       .articlecontainer{
-          width: 100%;
-          background-color: #ffffe3;
+          /* border: 1px solid red; */
+          width: 100%;     
       }
 
-     
+
+      .footer{
+          font-size: 1.8rem;     
+      }
+ 
 }
