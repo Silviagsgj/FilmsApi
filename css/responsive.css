@@ -134,7 +134,7 @@
 
 @media screen and (min-width:1024px) { 
 
-
+/******************** NAV  *************************/
     .nav__a{         
          font-size: 1.6rem;
     } 
@@ -225,10 +225,10 @@
 
   .header{ 
      
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr;
         grid-template-rows:repeat(2, 1fr);
-        grid-template-areas: "nav headertext"
-                             "nav headertext"; 
+        grid-template-areas: "nav"
+                             "headertext"; 
                                
 
     } 
@@ -244,22 +244,14 @@
                              "footer footer";                        
     }
 
-    .nav{
-        background-color: #FF1D58;
-
-    }
+   
 
     .nav__a{
         color: #ffffe3;
         font-size: 1.8rem;
     }
 
-    .nav__list{
-        /* border: 1px solid red;  */
-         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;       
-    } 
+  
 
 
      /********************** INFO *************************/

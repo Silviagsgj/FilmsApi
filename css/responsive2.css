@@ -1,0 +1,83 @@
+@media screen and (min-width:480px) {       
+
+    /********************** NAV *****************/
+    .nav__list{
+        justify-content: space-around;
+    }
+   
+    .nav__a{
+        font-size: 1.2rem;
+    }
+
+        
+    }
+    
+    @media screen and (min-width:768px) { 
+    
+        /******************** NAV ****************************/
+.nav__a{
+    font-size: 1.5rem;
+}
+    
+/********************** FOOTER *****************/
+.footer{    
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+
+   
+.article--lomas{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    padding: 0.5em;   
+}
+    
+    }
+    
+    @media screen and (min-width:1024px) { 
+  
+/******************** NAV  *************************/
+        .nav__a{         
+            font-size: 1.6rem;
+       } 
+         
+  /********************** FOOTER *****************/
+       
+.footer{  
+    flex-direction: row-reverse;
+    font-size: 1.5rem;
+}
+
+.article--atencion{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;  
+}
+
+.buscador__button{
+    font-size: 1.2rem;    
+    }
+   
+        
+    }
+    
+    @media screen and (min-width:1200px) { 
+        
+        .nav__a{           
+            font-size: 1.8rem;
+        }
+     
+        .footer{
+            font-size: 1.8rem;     
+        }
+
+   
+        
+    }
+    

@@ -3,6 +3,12 @@
     src: url("../font/SF\ Movie\ Poster\ Bold.ttf");
 }
 
+@font-face{
+    font-family: conte;
+    /* src: url("../font/VWText-Regular.otf"); */
+    src: url("../font/Quicksand-Regular.ttf");
+}
+
 *{
     margin: 0;
 }
@@ -42,10 +48,10 @@ body{
 .container {    
     min-width: 380px; /*Desde donde se hace responsive */
     max-width: 1920px; /*Hasta donde se hace responsive */
-    width: 100%;    
+    width: 100%;      
     display: grid;   
     grid-template-columns: 1fr;   
-    grid-template-rows: 200px 1fr 100px; 
+    grid-template-rows: 150px 1fr 180px; 
     grid-template-areas: "header"                         
                          "buscador"
                          "footer";                     
@@ -131,8 +137,7 @@ body{
 }
 
 .cajabusqueda{
-    /* border: 1px solid rosybrown; */
-    width: 25%;
+    /* border: 1px solid rosybrown; */    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -148,7 +153,8 @@ body{
     font-variant: small-caps;
     letter-spacing: 0.2rem;
     word-spacing: 0.4rem;
-    font-family: vw;
+    font-family: vw; 
+    font-size: 1rem;
 }
 
 .buscador__button{
@@ -159,7 +165,12 @@ body{
     font-variant: small-caps;
     letter-spacing: 0.2rem;
     font-family: vw;
-    color: #ffffe3; 
+    color: #ffffe3;     
+}
+
+.buscador__button:hover{
+    background-color: #212B38;;
+    border: 1px solid #ffffe3;
 }
 
 .buscador__input:focus{
@@ -177,7 +188,7 @@ body{
 
 .box{
     /* border: 1px solid orange; */
-    width: 150px;
+    width: 180px;
     height: 250px;    
     margin: 0.5rem;
 }
@@ -200,7 +211,7 @@ body{
 
 .galeria{
     /* border: 1px solid olive; */
-    width: 80%;    
+    width: 70%;    
     padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -217,7 +228,7 @@ body{
 .footer{   
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
     padding: 1rem;
     color: #ffffe3;    
     background-color:  #212B38;
