@@ -6,6 +6,7 @@ const POSTER = "https://simkl.net/posters/";
 const POSTER2 = "_c.jpg";
 
 let info= document.getElementById("info");
+let imaarray = document.querySelectorAll(".images__img");
 
 //Funcion que me coge el parametro del GET URL
 const getParameterByName = (name, url) => {
@@ -161,7 +162,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key="+KEY)
        console.log(datos_json);  
        let genero; 
     if(datos_json.genres.length==0){
-        console.log("nulo");
+        //console.log("nulo");
         //pongo un genero por defecto
          genero = "comedy";
     }else{
@@ -172,39 +173,17 @@ fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key="+KEY)
     fetch("https://api.simkl.com/tv/genres/"+genero+"?client_id="+CLIENTID)
     .then(datos => datos.json())   
     .then(datos_json => {
-        //console.log(datos_json);
-       let arrayrutas = [];
-        //me saco 8
-    for(let i=0; i<8; i++){
-        //guardo las 8 rutas en un array
-        //console.log(POSTER+datos_json[i].poster+POSTER2);
-        arrayrutas[i] = POSTER+datos_json[i].poster+POSTER2;
-    }
-    //console.log(arrayrutas);
-   
-    let im1 =document.getElementById("im1");
-    let im2 =document.getElementById("im2");
-    let im3 =document.getElementById("im3");
-    let im4 =document.getElementById("im4");
-    let im5 =document.getElementById("im5");
-    let im6 =document.getElementById("im6");
-    let im7 =document.getElementById("im7");
-    let im8 =document.getElementById("im8");
-
-    im1.src=arrayrutas[0];
-    im2.src=arrayrutas[1];
-    im3.src=arrayrutas[2];
-    im4.src=arrayrutas[3];
-    im5.src=arrayrutas[4];
-    im6.src=arrayrutas[5];
-    im7.src=arrayrutas[6];
-    im8.src=arrayrutas[7];
+        //console.log(datos_json); 
+    
+    //console.log(imaarray.length);
+    //Recorro el array de imagenes y guardo las series
+    for(let i=0; i<imaarray.length; i++){
+        imaarray[i].src=POSTER+datos_json[i].poster+POSTER2;
+    }//for   
 })//fin segundo fetch
-
 })//fin primer fetch
 
 }
-
 
 document.addEventListener("DOMContentLoaded", 
                             ()=>{

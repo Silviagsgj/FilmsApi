@@ -3,8 +3,6 @@
 /***************************** CAJA CONTENEDORA PAG2 *******************************/
 
 .container2{        
-    min-width: 380px; /*Desde donde se hace responsive */
-    max-width: 1920px; /*Hasta donde se hace responsive */
     width: 100%;   
     display: grid;   
     grid-template-columns: 1fr;   
@@ -152,7 +150,7 @@ text-shadow: 1px 2px 4px #37465B;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    border-bottom: 1px solid #ff1d5993;  ;
+    border-bottom: 1px solid #ff1d5993;  
     margin: 1em;   
 }
 

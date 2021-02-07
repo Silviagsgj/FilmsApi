@@ -2,9 +2,7 @@
 
 /*************************** Contenedor ******************************/
 
-.container {    
-    min-width: 380px; /*Desde donde se hace responsive */
-    max-width: 1920px; /*Hasta donde se hace responsive */
+.container {       
     width: 100%;      
     display: grid;   
     grid-template-columns: 1fr;   
@@ -44,11 +42,12 @@
     word-spacing: 0.4rem;
     font-family: vw; 
     font-size: 1rem;
+    margin-right: 1em;
 }
 
 .buscador__button{
-    background-color: #FF1D58 ;
-    border: 1px solid #FF1D58 ;
+    background-color: #ff1d5993;  
+    border: 1px solid #ff1d5993; 
     padding: 0.5em 1em;    
     border-radius:  5px;
     font-variant: small-caps;
@@ -100,8 +99,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;  
-    display: none;
+    align-items: center; 
 }
 
 .error{

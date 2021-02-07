@@ -44,8 +44,8 @@ const masvistas = () => {
         fragment.appendChild(articulo);  
       }//for
 
-    galeria.appendChild(fragment);
-    galeria.style.display="flex"; 
+    galeria.appendChild(fragment);  
+        
   })
 }//mostrar
 
@@ -92,14 +92,14 @@ const mostrar = () => {
         let imagen = document.createElement("IMG");
         //Caso de que la pelicula no tenga imagen, le pongo una por defecto
         if(datos_json.results[i].poster_path==null){
-          imagen.src = "image/b.jpg";      
+          imagen.src = "image/b.jpg";     
         }else{
           let ima = datos_json.results[i].poster_path;
-          imagen.src=IMAGE+ima; 
+          imagen.src=IMAGE+ima;        
         }         
-        imagen.classList.add("ajustar");
+         imagen.classList.add("ajustar");
+       
         articulo.appendChild(imagen);
-        
         //Obtengo el id para llevarlo a la otra pag
         let sp= document.createElement("P");
         sp.textContent = datos_json.results[i].id;
@@ -109,10 +109,11 @@ const mostrar = () => {
         fragment.appendChild(articulo);  
       }//for
 
-    galeria.appendChild(fragment);
-    galeria.style.display="flex";
+    galeria.appendChild(fragment);    
     }//fin else
-  }) }//fin de else
+    busqueda.focus();
+  }) 
+}//fin de else
 }//mostrar
 
 buscar.addEventListener("click", mostrar);
