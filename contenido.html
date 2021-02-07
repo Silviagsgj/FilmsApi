@@ -3,54 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contenido</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>Api</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/contenido.css">
+    <link rel="stylesheet" href="css/responsivecontenido.css">
 </head>
 <body>
+    <!-- Caja contenedora -->
     <div id="container" class="container2">
+        <!-- HEADER -->
         <header class="header">
             <div class="headertext">
                 <h1 class="header__title">Portal Películas</h1>
                 <h2 class="header__subtitle">Encuentra toda la información sobre las peliculas y series del momento</h2> 
             </div>
-            
- <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__a" href="">Buscador de peliculas</a></li>            
-                <li class="nav__item"><a class="nav__a" href="">Reviews</a></li>
-                <li class="nav__item"><a class="nav__a" href="">Contacto</a></li>
-                <li class="nav__item"><a class="nav__a" href="">Sobre nosotros</a></li>
-            </ul>
-        </nav>
-
-
+            <!-- NAV -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__a" href="index.html">Buscador de peliculas</a></li>            
+                    <li class="nav__item"><a class="nav__a" href="">Reviews</a></li>
+                    <li class="nav__item"><a class="nav__a" href="">Contacto</a></li>
+                    <li class="nav__item"><a class="nav__a" href="">Sobre nosotros</a></li>
+                </ul>
+            </nav>
         </header>   
-       
-        
-     
+              
+        <!-- SECTION INFO -->
         <section class="info">
             <div class="text">
                 <h2 class="text__title">Información y detalle </h2>                
             </div>
-
             <div class="boxi"  id="info">
        
             </div>
         </section>
         
+        <!-- SECTION REVIEW -->
         <section class="review">
             <div class="text">
                 <h2 class="text__title">Últimas opiniones</h2>              
             </div>
 
             <div class="cajaarticulos" id="arti"> 
-                
-               
+                               
             </div>            
         </section>      
         
-         <section class="gallery">            
+        <!-- SECTION GALLERY -->
+        <section class="gallery">            
             <div class="text">
                 <h2 class="text__title">Series que te pueden gustar</h2>
                 <p class="text__subtitle">Descubre las últimas series del momento</p>
@@ -83,7 +84,7 @@
             </div>
         </section>
 
-
+        <!-- FOOTER -->
         <footer class="footer">
             <article class="article article--lomas">
                 <header class="article__header">
@@ -113,7 +114,7 @@
             </article>
         </footer>
     </div>
-        
+    <!-- JS -->
     <script src="js/scriptcontenido.js"></script>
 </body>
 </html>

@@ -1,0 +1,215 @@
+/* CSS CONTENIDO.HTML */
+
+/***************************** CAJA CONTENEDORA PAG2 *******************************/
+
+.container2{        
+    min-width: 380px; /*Desde donde se hace responsive */
+    max-width: 1920px; /*Hasta donde se hace responsive */
+    width: 100%;   
+    display: grid;   
+    grid-template-columns: 1fr;   
+    grid-template-rows: 150px  repeat(2, auto) 180px; 
+    grid-template-areas: "header"                          
+                         "info"
+                         "review"                         
+                         "footer";                        
+}
+
+/************************* TITULO Y SUBTITULO SECTION ******************************/
+
+.text{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: vw1;
+}
+
+.text__title{
+    margin-bottom: 1rem;     
+    padding: 0.3em;    
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    font-size: 1.8rem;     
+    color: #ffffe3;   
+    border-bottom: 2px solid #ffffe3; 
+}
+
+.text__subtitle{   
+   /* border: 1px solid red; */
+   font-size: 1.5rem;
+   color: #ffffe3;
+   width: inherit;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    text-align: justify; 
+    display: none;
+}
+
+
+/********************** SECTION INFO ****************************************/
+ 
+.info {
+    /* border: 1px solid teal; */ 
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
+} 
+
+.info__box{
+    /* border: 1px solid red;    */
+    border-radius: 3px;   
+    padding: 1em;
+    text-align: justify;   
+    background-color: #ffffe3;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+    font-size: 1.5rem;
+}
+
+.info__box--title{
+/* border: 1px solid red; */
+margin-bottom: 1rem;
+letter-spacing: 0.3rem;
+word-spacing: 0.5rem;
+font-size: 1.8rem; 
+color: #FF1D58 ;
+text-shadow: 2px 2px 4px #37465B;
+font-variant: small-caps;
+}
+
+.info__box--text{
+    /* border: 1px solid green; */
+    margin-bottom: 1rem;  
+}
+
+.info__box--textge{
+/* border: 1px solid red; */
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+letter-spacing: 0.3rem;
+margin-top: 1rem;
+color: #FF1D58;
+border-bottom: 2px solid #37465B;
+display: none;
+font-variant: small-caps;
+text-shadow: 1px 2px 4px #37465B;
+}
+
+.info__box2{
+    display: none;
+}
+
+.caja3{
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-around;
+}
+
+
+/**************************** SECTION REVIEW *************************/
+
+.review {
+    /* border: 1px solid red; */  
+    background-color: #ff1d5993; 
+    padding: 1rem;     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;   
+}
+
+.cajaarticulos{
+    /* border: 1px solid teal;    */
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #ffffe3;    
+}
+
+.cajaarticulos__p{   
+    padding: 0.5rem;  
+    border-radius: 3px;
+}
+
+.articlecontainer{
+    /* border: 1px solid red;       */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border-bottom: 1px solid #ff1d5993;  ;
+    margin: 1em;   
+}
+
+.articlecontainer__header{  
+    /* border: 1px solid red; */
+   font-size: 1.5rem;  
+   width: 100%;  
+   color: #ff1d5993;     
+   font-family: vw1;  
+}
+
+.articlecontainer__text{
+    /* border: 1px solid red; */
+    text-align: justify;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/*************************** SECTION GALLERY *******************************/
+
+.gallery {    
+    padding: 1rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.images {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.images__container {   
+    /* border: 1px solid green; */
+    width: 180px;
+    background-color: #ffffe3; 
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 0.3rem; 
+    filter: grayscale(30%);  
+}
+
+.images__container:hover{
+    filter: grayscale(0%);    
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

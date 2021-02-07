@@ -21,12 +21,13 @@ const masvistas = () => {
         articulo.classList.add("box");
 
         let imagen = document.createElement("IMG");
-        //Caso de que la pelicula no tenga imagen, le pongo una por defecto y añado su titulo
+        //Caso de que la pelicula no tenga imagen, le pongo una por defecto
         if(datos_json.results[i].poster_path==null){
-          imagen.src = "image/b.jpg";        
           // let titulo = document.createElement("P");
-          // titulo.textContent = datos_json.results[i].title;          
-          // articulo.appendChild(titulo);  
+          // titulo.textContent = datos_json.results[i].title;
+          // articulo.appendChild(titulo);
+          imagen.src = "image/b.jpg";        
+         
         }else{
           let ima = datos_json.results[i].poster_path;
           imagen.src=IMAGE+ima; 
@@ -39,16 +40,12 @@ const masvistas = () => {
         sp.textContent = datos_json.results[i].id;
         sp.style.display = "none";
         articulo.appendChild(sp);              
-          
-        // let popularidad = document.createElement("P");
-        // popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
-        // articulo.appendChild(popularidad);
+                 
         fragment.appendChild(articulo);  
       }//for
 
     galeria.appendChild(fragment);
-    galeria.style.display="flex";
- 
+    galeria.style.display="flex"; 
   })
 }//mostrar
 
@@ -68,10 +65,6 @@ const borrar = () => {
   }//if
 }//borrar
 
-// let borrarb = document.getElementById("borrarb");
-// borrarb.addEventListener("click", borrar);
-
-
 //Funcion que me muestra una galeria de peliculas 
 const mostrar = () => {
     if(busqueda.value==""){ 
@@ -85,14 +78,8 @@ const mostrar = () => {
     if(datos_json.results.length==0){
       // console.log(busqueda.value);
       error.textContent = "No se ha encontrado ninguna pelicula con este nombre: "+busqueda.value;
-    }else{
-
-    
-    borrar();
-   
-   
-
-    
+    }else{    
+    borrar();        
     // console.log(datos_json);    
     console.log(datos_json.results);
     const fragment = document.createDocumentFragment();
@@ -103,12 +90,9 @@ const mostrar = () => {
         articulo.classList.add("box");
 
         let imagen = document.createElement("IMG");
-        //Caso de que la pelicula no tenga imagen, le pongo una por defecto y añado su titulo
+        //Caso de que la pelicula no tenga imagen, le pongo una por defecto
         if(datos_json.results[i].poster_path==null){
-          imagen.src = "image/b.jpg";        
-          // let titulo = document.createElement("P");
-          // titulo.textContent = datos_json.results[i].title;          
-          // articulo.appendChild(titulo);  
+          imagen.src = "image/b.jpg";      
         }else{
           let ima = datos_json.results[i].poster_path;
           imagen.src=IMAGE+ima; 
@@ -120,11 +104,8 @@ const mostrar = () => {
         let sp= document.createElement("P");
         sp.textContent = datos_json.results[i].id;
         sp.style.display = "none";
-        articulo.appendChild(sp);              
-          
-        // let popularidad = document.createElement("P");
-        // popularidad.textContent = `Popularidad: ${datos_json.results[i].popularity}`;
-        // articulo.appendChild(popularidad);
+        articulo.appendChild(sp);             
+                  
         fragment.appendChild(articulo);  
       }//for
 

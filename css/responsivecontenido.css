@@ -1,0 +1,305 @@
+@media screen and (min-width:480px) {      
+/********************** NAV *****************/
+    .nav__list{
+        justify-content: space-around;
+    }
+   
+    .nav__a{
+        font-size: 1.2rem;
+    }
+/********************** SUBTITULOS *****************/
+    .text__subtitle{
+        display: block;
+    }
+
+/********************** SECTION INFO *****************/
+    .info__box--textge{
+        display:flex;
+    }    
+}
+
+
+
+@media screen and (min-width:768px) { 
+/********************** GRID *************************/
+.gallery {
+    grid-area: gallery;
+}
+
+.container2{    
+    grid-template-rows: 300px repeat(3, auto) 200px; 
+    grid-template-areas: 
+                         "header"
+                         "info"
+                         "review" 
+                         "gallery"                        
+                         "footer";                        
+}
+
+.header{     
+    grid-template-rows: 1fr 75px;   
+}
+
+.header__subtitle{
+    /* border: 1px solid red; */
+    display: flex;
+    text-align: center;    
+}
+
+.headertext{
+    /* border:1px solid red; */
+    flex-direction: column;
+}
+
+/********************* TEXTOS ************************/
+.text{
+    align-items: flex-start;
+}
+
+.text__title{
+    font-size: 2rem;
+}
+
+.text__subtitle{
+    font-size: 1.8rem;
+}
+
+/******************** NAV ****************************/
+
+.nav{
+    background-color: #ff1d5993;
+}
+
+.nav__a{
+    font-size: 1.5rem;
+}
+
+.nav__a:hover{
+    color: #212B38; 
+}
+    
+/********************** SECTION INFO *****************/ 
+    
+    .info__box{
+        /* border: 1px solid red; */
+        flex-direction: row-reverse;        
+    }
+
+    .info__box--textge{
+        /* border: 1px solid red; */
+        width: 20%;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 2px solid transparent;
+    }
+
+    .caja3{
+        /* border: 1px solid teal; */
+        align-items: flex-start;
+        width: 60%;       
+    }
+
+/**************************** SECTION REVIEW *************************/
+
+    .cajaarticulos{
+        flex-direction: row;
+        justify-content: space-around;        
+        flex-wrap: wrap;     
+        font-size: 1.8rem;  
+    }
+
+    .articlecontainer{
+        width: 45%;
+        background-color: #ff1d591c;       
+        border-bottom: 1px solid transparent;    
+    }
+
+    .articlecontainer__header{
+        /* border: 1px solid red; */
+        text-align: center;
+        background-color: #ff1d5993;       
+        color:  #ffffe3;    
+        border-radius: 3px;
+        letter-spacing: 0.2rem;
+    }
+
+/******************** GALLERY **********************/
+    .gallery{
+        display: flex;
+    }    
+
+/********************** FOOTER *****************/
+
+.footer{    
+    align-items: center;
+    font-size: 1.2rem;
+}
+   
+.article--lomas{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    padding: 0.5em;   
+}
+}
+
+
+
+@media screen and (min-width:1024px) { 
+
+/******************** NAV  *************************/
+    .nav__a{         
+         font-size: 1.6rem;
+    }      
+
+/*****************  Textos ************************/
+
+    .text__title{
+        font-size: 2.5rem;
+    }
+    
+    .text__subtitle{
+        font-size: 2rem;
+    }
+
+/********************** SECTION INFO *****************/
+
+    .info__box{
+        /* border: 1px solid red; */
+        flex-direction: column-reverse;
+        width: 40%;      
+    }
+
+    .info__box--textge{
+        /* border: 1px solid red; */
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 1rem;     
+    }
+
+    .caja3{
+        /* border: 1px solid teal; */
+        align-items: center;
+        width: 100%;       
+    }
+
+    .boxi{
+        /* border: 1px solid royalblue; */
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center; 
+        padding: 1rem;
+    }
+
+    .info__box2{
+        display: flex;
+        /* border: 1px solid red; */
+        background-color: #ffffe3;
+            border-radius: 3px;
+    }    
+
+     .ajustar2{
+         width: 350px;
+        height: 250px; 
+        object-fit: contain;  
+    } 
+ 
+    /**************************** SECTION REVIEW *************************/
+    
+    .articlecontainer{
+        /* border: 1px solid red; */
+        width: 30%;      
+    }
+
+    .cajaarticulos{
+        font-size: 2rem;
+    }
+
+    /********************** FOOTER *****************/
+
+    .footer{  
+        flex-direction: row-reverse;
+        font-size: 1.5rem;
+    }
+
+    .article--atencion{
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5em;  
+    }
+}
+
+@media screen and (min-width:1200px) { 
+
+    /********************** GRID *************************/
+
+  .header{      
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 3fr;
+        grid-template-areas: "nav"
+                             "headertext"; 
+    } 
+
+    .container2{    
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows:  300px repeat(2, auto) 200px; 
+        grid-template-areas: 
+                             "header header"
+                             "info review "                              
+                             "gallery review"                        
+                             "footer footer";                        
+    } 
+
+    .nav__a{
+        color: #ffffe3;
+        font-size: 1.8rem;
+    }
+
+    /********************** INFO *************************/
+
+    .info__box{
+        /* border: 1px solid green; */
+        width: 45%;
+    }   
+
+    .boxi{
+        /* border: 1px solid pink; */
+        flex-direction: row;     
+        justify-content: space-around;
+        background-color: #ffffe3;
+        border-radius: 3px;
+    }
+
+    .info__box2{
+        /* border: 1px solid red; */
+        width: 40%;
+    }
+
+     .ajustar2{
+        width: 100%;       
+    } 
+
+      /********************** REVIEWS *************************/
+
+      .text__subtitle{
+          display: none;
+      }
+        
+      .articlecontainer{
+          /* border: 1px solid red; */
+          width: 100%;     
+      }
+
+      .footer{
+          font-size: 1.8rem;     
+      }
+ 
+}

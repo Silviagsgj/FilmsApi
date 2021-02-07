@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api</title>
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/responsive2.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/comun.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    
+    <!-- Caja contenedora -->
     <div id="container" class="container">
+        <!-- HEADER -->
         <header class="header">
             <div class="headertext">
                 <h1 class="header__title">Portal Películas</h1>
                 <h2 class="header__subtitle">Encuentra toda la información sobre las peliculas del momento</h2> 
             </div>
-        
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__a" href="">Buscador de peliculas</a></li>            
-                <li class="nav__item"><a class="nav__a" href="">Reviews</a></li>
-                <li class="nav__item"><a class="nav__a" href="">Contacto</a></li>
-                <li class="nav__item"><a class="nav__a" href="">Sobre nosotros</a></li>
-            </ul>
-        </nav>
-
-        </header> 
-        
-       
+            <!-- NAV -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__a" href="index.html">Buscador de peliculas</a></li>            
+                    <li class="nav__item"><a class="nav__a" href="">Reviews</a></li>
+                    <li class="nav__item"><a class="nav__a" href="">Contacto</a></li>
+                    <li class="nav__item"><a class="nav__a" href="">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+        </header>             
    
-
+        <!-- SECTION BUSCADOR -->
         <section class="buscador">
             <div class="cajabusqueda">
                 <input type="text" name="busqueda" id="busqueda" class="buscador__input">
-                <button id="buscar" class="buscador__button">Buscar</button>
-                <!-- <button id="borrarb" class="buscador__button">Borrar</button> -->
-               
+                <button id="buscar" class="buscador__button">Buscar</button>             
             </div>
             <span id="error" class="error"></span>
+            <!-- GALERIA -->
             <div id="galeria" class="galeria">
               
             </div>
         </section>   
         
+        <!-- FOOTER -->
         <footer class="footer">
             <article class="article article--lomas">
                 <header class="article__header">
@@ -70,9 +70,9 @@
                     <a class="redes__a" href=""><img src="image/ff.png" alt="" class="redes__img"></a>
                 </div>
             </article>
-        </footer>
-    
+        </footer>    
     </div>
+    <!-- JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
