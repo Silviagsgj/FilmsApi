@@ -6,8 +6,9 @@
     width: 100%;   
     display: grid;   
     grid-template-columns: 1fr;   
-    grid-template-rows: 150px  repeat(2, auto) 180px; 
-    grid-template-areas: "header"                          
+    grid-template-rows: 120px 75px repeat(2, auto) 180px; 
+    grid-template-areas: "header"
+                         "nav"                             
                          "info"
                          "review"                         
                          "footer";                        

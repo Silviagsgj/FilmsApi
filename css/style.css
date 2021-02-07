@@ -6,11 +6,13 @@
     width: 100%;      
     display: grid;   
     grid-template-columns: 1fr;   
-    grid-template-rows: 150px 1fr 180px; 
-    grid-template-areas: "header"                         
+    grid-template-rows: 120px 75px 1fr 180px; 
+    grid-template-areas: "header" 
+                         "nav"                        
                          "buscador"
                          "footer";                     
 }
+
 
 /*************   PARTE BUSCADOR    ***************************/
 
@@ -94,7 +96,7 @@
 
 .galeria{
     /* border: 1px solid olive; */
-    width: 60%;    
+    width: 80%;    
     padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;

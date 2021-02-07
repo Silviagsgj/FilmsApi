@@ -5,7 +5,7 @@
     }
    
     .nav__a{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 /********************** SUBTITULOS *****************/
     .text__subtitle{
@@ -27,28 +27,25 @@
 }
 
 .container2{    
-    grid-template-rows: 300px repeat(3, auto) 200px; 
+    grid-template-rows: 300px 75px repeat(3, auto) 200px; 
     grid-template-areas: 
                          "header"
+                         "nav"
                          "info"
                          "review" 
                          "gallery"                        
                          "footer";                        
 }
 
-.header{     
-    grid-template-rows: 1fr 75px;   
+.header__title{ 
+
+    font-size: 2.5rem;
 }
 
 .header__subtitle{
     /* border: 1px solid red; */
     display: flex;
     text-align: center;    
-}
-
-.headertext{
-    /* border:1px solid red; */
-    flex-direction: column;
 }
 
 /********************* TEXTOS ************************/
@@ -149,9 +146,27 @@
 
 @media screen and (min-width:1024px) { 
 
+    .container2{    
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: repeat(2,200px) repeat(3, auto) 200px; 
+        grid-template-areas: "nav header"
+                             "nav header"
+                             "info info"                              
+                             "review review"      
+                             "gallery gallery"                  
+                             "footer footer";                        
+    } 
+
 /******************** NAV  *************************/
+    .nav__list{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
     .nav__a{         
-         font-size: 1.6rem;
+         font-size: 1.2rem;
+        
     }      
 
 /*****************  Textos ************************/
@@ -239,19 +254,20 @@
 
 @media screen and (min-width:1200px) { 
 
+    .text__title{
+        font-size: 2.2rem;
+    }
+    
+    .text__subtitle{
+        font-size: 2rem;
+    }
     /********************** GRID *************************/
 
-  .header{      
-        grid-template-columns: 1fr;
-        grid-template-rows:1fr 3fr;
-        grid-template-areas: "nav"
-                             "headertext"; 
-    } 
-
+  
     .container2{    
         grid-template-columns: 4fr 2fr;
-        grid-template-rows:  300px repeat(2, auto) 200px; 
-        grid-template-areas: 
+        grid-template-rows: 90px 300px repeat(2, auto) 200px; 
+        grid-template-areas: "nav nav"
                              "header header"
                              "info review "                              
                              "gallery review"                        
@@ -260,8 +276,14 @@
 
     .nav__a{
         color: #ffffe3;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
+
+    .nav__list{
+        flex-direction: row;
+ 
+    }
+
 
     /********************** INFO *************************/
 

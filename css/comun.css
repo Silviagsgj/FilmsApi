@@ -30,10 +30,6 @@ body{
     grid-area: nav;
 }
 
-.headertext{
-    grid-area: headertext;   
-}
-
 .info {
     grid-area: info;
 }
@@ -53,53 +49,47 @@ body{
 
 /******************************   HEADER    ************************/
 
-.header{ 
-    /* border: 1px solid lime; */
-    background-color: #212B38;    
-    display: grid;   
-    grid-template-columns: 1fr;
-    grid-template-rows:repeat(2, 1fr);
-    grid-template-areas: "headertext"
-                            "nav"; 
-                           
-    width: 100%;
+.header{
+    /* border: 1px solid royalblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: vw1;
+    background-color:  #212B38;
 }
     
 .header__title{    
-    font-size: 4rem;
+    font-size: 1.8rem;
     letter-spacing: 0.5rem;
     word-spacing: 1rem;
     color: #ffffe3;
     text-shadow: 3px 2px 2px #FF1D58;
+    /* border: 1px solid white; */
 }
 
 .header__subtitle{
-    /* font-size: 20px; */
     display: none;
     color: #ffffe3;
-    font-size: 2rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5rem;
     word-spacing: 1rem;
+    /* border: 1px solid white; */
 }
 
-.headertext{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /********************************** NAV *************************************************/
 .nav{
     /* border: 1px solid white; */
-   background-color: #212B38;   
+   background-color: #212B38;  
+   font-family: vw1; 
 }
 
 .nav__list{
     /* border: 1px solid red;   */
     height: 100%;
     display: flex;  
+    flex-wrap: wrap;
     justify-content:space-evenly;      
     align-items: center;
     padding: 0;
@@ -112,7 +102,7 @@ body{
 
 .nav__a{
     text-decoration: none;
-    font-size: 0.8rem;    
+    font-size: 0.6rem;    
     letter-spacing: 0.2rem;
     word-spacing: 0.3rem;
     color: #ffffe3;  
