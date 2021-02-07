@@ -60,11 +60,11 @@ body{
 }
     
 .header__title{    
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     letter-spacing: 0.5rem;
     word-spacing: 1rem;
     color: #ffffe3;
-    text-shadow: 3px 2px 2px #FF1D58;
+    text-shadow: 3px 2px 2px #FF1D58;   
     /* border: 1px solid white; */
 }
 

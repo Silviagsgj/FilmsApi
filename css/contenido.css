@@ -11,7 +11,8 @@
                          "nav"                             
                          "info"
                          "review"                         
-                         "footer";                        
+                         "footer";  
+                    
 }
 
 /************************* TITULO Y SUBTITULO SECTION ******************************/
@@ -31,14 +32,14 @@
     padding: 0.3em;    
     letter-spacing: 0.2rem;
     word-spacing: 0.5rem;
-    font-size: 1.8rem;     
+    font-size: 1.5rem;     
     color: #ffffe3;   
     border-bottom: 2px solid #ffffe3; 
 }
 
 .text__subtitle{   
    /* border: 1px solid red; */
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    color: #ffffe3;
    width: inherit;
     margin-bottom: 0.5em;
@@ -70,7 +71,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly; 
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .info__box--title{
@@ -78,7 +79,7 @@
 margin-bottom: 1rem;
 letter-spacing: 0.3rem;
 word-spacing: 0.5rem;
-font-size: 1.8rem; 
+font-size: 1.2rem; 
 color: #FF1D58 ;
 text-shadow: 2px 2px 4px #37465B;
 font-variant: small-caps;
@@ -135,8 +136,7 @@ text-shadow: 1px 2px 4px #37465B;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+    align-items: center;  
     background-color: #ffffe3;    
 }
 
@@ -167,7 +167,7 @@ text-shadow: 1px 2px 4px #37465B;
     /* border: 1px solid red; */
     text-align: justify;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /*************************** SECTION GALLERY *******************************/

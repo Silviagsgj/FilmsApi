@@ -59,7 +59,7 @@
 }
 
 .buscador__button:hover{
-    background-color: #212B38;;
+    background-color: #212B38;
     border: 1px solid #ffffe3;
 }
 
@@ -96,6 +96,8 @@
 
 .galeria{
     /* border: 1px solid olive; */
+    background-color: rgba(33, 43, 56, 0.2);
+    border-radius: 3px;
     width: 80%;    
     padding: 0.5rem;
     display: flex;

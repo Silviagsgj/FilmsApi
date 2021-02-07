@@ -21,7 +21,7 @@
 
     .header__title{ 
 
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     
     .header__subtitle{
@@ -37,7 +37,7 @@
     }
 
     .nav__a{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .nav__a:hover{
@@ -84,7 +84,7 @@
 
 
     .nav__a{         
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     } 
          
   /********************** FOOTER *****************/
@@ -92,7 +92,7 @@
     .footer{  
         /* border: 1px solid red; */
         flex-direction: row-reverse;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .article--atencion{
@@ -104,14 +104,29 @@
     }
 
     .buscador__button{
-        font-size: 1.2rem;    
+        font-size: 1rem;    
     }
 }
     
 @media screen and (min-width:1200px) { 
 
 
-    .container {       
+    .header__title{
+        font-size: 2.3rem;
+        letter-spacing: 2rem;
+    }
+
+    .header__subtitle{
+        width: 100%;     
+        background-color: #ffffe3;             
+        color: #212B38; 
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;   
+        display: flex;
+        justify-content: center;      
+    } 
+
+    .container {     
       
         grid-template-columns: 1fr 1fr;  
         grid-template-rows: 90px 300px 1fr 200px; 
@@ -131,11 +146,11 @@
     }
      
     .footer{
-        font-size: 1.8rem;     
+        font-size: 1.3rem;     
     }
   
     .error{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 }
     

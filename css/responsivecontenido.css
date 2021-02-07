@@ -39,7 +39,7 @@
 
 .header__title{ 
 
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .header__subtitle{
@@ -54,11 +54,11 @@
 }
 
 .text__title{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .text__subtitle{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 /******************** NAV ****************************/
@@ -68,7 +68,7 @@
 }
 
 .nav__a{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .nav__a:hover{
@@ -79,7 +79,12 @@
     
     .info__box{
         /* border: 1px solid red; */
-        flex-direction: row-reverse;        
+        flex-direction: row-reverse;  
+        font-size: 1.1rem;      
+    }
+
+    .info__box--title{
+        font-size: 1.3rem;
     }
 
     .info__box--textge{
@@ -102,19 +107,19 @@
         flex-direction: row;
         justify-content: space-around;        
         flex-wrap: wrap;     
-        font-size: 1.8rem;  
+        /* font-size: 1.8rem;   */
     }
 
     .articlecontainer{
         width: 45%;
-        background-color: #ff1d591c;       
+        background-color: #ff1d591c;  
         border-bottom: 1px solid transparent;    
     }
 
     .articlecontainer__header{
         /* border: 1px solid red; */
         text-align: center;
-        background-color: #ff1d5993;       
+        background-color: #ff1d5993;    
         color:  #ffffe3;    
         border-radius: 3px;
         letter-spacing: 0.2rem;
@@ -165,26 +170,34 @@
     }
 
     .nav__a{         
-         font-size: 1.2rem;
+         font-size: 1.3rem;
         
     }      
 
 /*****************  Textos ************************/
 
     .text__title{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     
     .text__subtitle{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
+
+  
+
 
 /********************** SECTION INFO *****************/
 
     .info__box{
         /* border: 1px solid red; */
         flex-direction: column-reverse;
-        width: 40%;      
+        width: 40%;  
+        font-size: 1.2rem;    
+    }
+
+    .info__box--title{
+        font-size: 1.5rem;
     }
 
     .info__box--textge{
@@ -232,15 +245,20 @@
         width: 30%;      
     }
 
-    .cajaarticulos{
-        font-size: 2rem;
+    
+    .articlecontainer__header{
+        font-size: 1.3rem;
+    }
+
+    .articlecontainer__text{
+        font-size: 1rem;
     }
 
     /********************** FOOTER *****************/
 
     .footer{  
         flex-direction: row-reverse;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .article--atencion{
@@ -254,12 +272,27 @@
 
 @media screen and (min-width:1200px) { 
 
+    .header__title{
+        font-size: 2.3rem;
+        letter-spacing: 2rem;   
+    }
+
+    .header__subtitle{
+        width: 100%;     
+        background-color: #ffffe3;             
+        color: #212B38; 
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;   
+        display: flex;
+        justify-content: center;   
+    }
+
     .text__title{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .text__subtitle{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     /********************** GRID *************************/
 
@@ -321,7 +354,7 @@
       }
 
       .footer{
-          font-size: 1.8rem;     
+          font-size: 1.3rem;     
       }
  
 }
